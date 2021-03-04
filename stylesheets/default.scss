@@ -1,7 +1,76 @@
 ---
-# Required for Jekyll to detect this
+# Required for Jekyll to detect this file
 ---
 
 .game {
   height: 200px;
+}
+
+@font-face {
+  font-family: vgdc;
+  src: url(/assets/fonts/lemonmilk_regular.otf);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: vgdc;
+  font-size: 20px;
+  letter-spacing: 10px;
+  background-color: #444a4f;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -2;
+  background-image: url(/assets/img/gravity-box-thicc.gif);
+  background-color: rgba(255, 255, 0, 0.45); // Tint color
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(4px) opacity(100%);
+}
+
+#venivigidici {
+  font-size: 48px;
+  color: #323A40;
+  letter-spacing: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0 1 200px;
+  height: 80px;
+  background-color: #323a40bf;
+}
+
+a {
+  color: #ebedcc;
+  text-decoration: none;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
