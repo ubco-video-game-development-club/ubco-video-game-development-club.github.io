@@ -4,28 +4,33 @@
   (c) UBCO Video Game Development Club
 -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/stylesheets/default.css' }}" />
   </head>
   <body>
     <header>
-      <h1>The UBCO Video Game Development Club</h1>
       <nav>
+        <a href="/about">About</a>
+        <a href="/events">Events</a>
+        <a href="/"><img src="/assets/img/logo-white-transparent.png" height="80" /></a>
+        <a href="/games">Games</a>
+        <a href="/merch">Merch</a>
       </nav>
     </header>
     <main>
       <!-- Unique page content goes here -->
       {{ content }}
     </main>
+    <!-- TODO: implement footer -->
     <footer>
       <address>
         <!-- Contact information -->
-        <a href="mailto:ubcovgdc@gmail.com">ubcovgdc@gmail.com</a><br>
-        <a href="https://github.com/ubco-video-game-development-club">Github</a>
+        <!-- <a href="mailto:ubcovgdc@gmail.com">ubcovgdc@gmail.com</a><br />
+        <a href="https://github.com/ubco-video-game-development-club">Github</a> -->
       </address>
     </footer>
   </body>
