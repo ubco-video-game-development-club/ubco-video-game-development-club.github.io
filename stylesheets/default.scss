@@ -2,13 +2,42 @@
 # Required for Jekyll to detect this file
 ---
 
-.game {
-  height: 200px;
-}
-
 @font-face {
   font-family: vgdc;
   src: url(/assets/fonts/lemonmilk_regular.otf);
+}
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.game-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 300px;
+}
+
+.game-body {
+  width: 100%;
+  height: 92%;
+  margin: 30px;
+  padding: 0px 15px;
+  border: 3px solid #616264;
+  box-shadow: 3px 3px #323a40;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.game-body h1 {
+  font-size: 24px;
+}
+
+.game-body h4 {
+  font-size: 14px;
 }
 
 body {
@@ -21,7 +50,7 @@ body {
   background-color: #444a4f;
 }
 
-main {
+#home {
   position: fixed;
   top: 0;
   left: 0;
@@ -62,9 +91,7 @@ main {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  flex: 0 1 200px;
   height: 80px;
   background-color: #323a40bf;
 }
