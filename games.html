@@ -2,10 +2,13 @@
 layout: default
 ---
 
-{% for game in site.data.games %}
-<div class="game" style="background-image: url('{{ game.gif }}');">
-  <h1>{{ game.title }}</h1>
-  <h4>{{ game.description }}</h4>
-  <!-- <img visibility="hidden" src="{{ game.gif }}" alt="{{ game.title }} gif"  width=250/> -->
+<div class="game-grid">
+  {% for game in site.data.games %}
+  <div class="game-box">
+    <div class="game-body" style="background-image: url('{{ game.gif }}')">
+      <h1>{{ game.title }}</h1>
+      <h4>{{ game.description }}</h4>
+    </div>
+  </div>
+  {% endfor %}
 </div>
-{% endfor %}
