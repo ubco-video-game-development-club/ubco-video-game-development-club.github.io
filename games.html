@@ -5,10 +5,14 @@ layout: default
 <div class="game-grid">
   {% for game in site.data.games %}
   <div class="game-box">
-    <div class="game-body" style="background-image: url('{{ game.gif }}')">
-      <h1>{{ game.title }}</h1>
-      <h4>{{ game.description }}</h4>
-    </div>
+    <a class="game-body" style="background-image: url('{{ game.img }}')" href="{{ game.link }}">
+      <div class="game-title">
+        <h1>{{ game.title }}</h1>
+      </div>
+      <div class="game-desc">
+        <h4>{{ game.description }}</h4>
+      </div>
+    </a>
   </div>
   {% endfor %}
 </div>
