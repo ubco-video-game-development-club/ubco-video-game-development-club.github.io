@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navbar">
         <a href="/about">About</a>
         <a href="/events">Events</a>
         <a href="/"><img src="/assets/img/logo-white-transparent.png" height="80" /></a>
@@ -35,3 +35,23 @@
     </footer>
   </body>
 </html>
+
+<script>
+  (function () {
+    console.log(location.pathname.split('/'));
+    var pageName = location.pathname.split('/')[1];
+    if (pageName === '') return; // remove if main page desired
+    var navItems = document.querySelectorAll('#navbar a');
+    for (var i = 0, len = navItems.length; i < len; i++) {
+      // With main page
+      // var navPath = navItems[i].getAttribute('href');
+      // if ((navPath.indexOf(pageName) !== -1 && pageName.length > 0) || (navPath === '/' && pageName.length === 0)) {
+      //   navItems[i].classList.add('active');
+      // }
+      // Without main page
+      if (navItems[i].getAttribute('href').indexOf(pageName) !== -1) {
+        navItems[i].classList.add('active');
+      }
+    }
+  })();
+</script>

@@ -132,3 +132,12 @@ a {
   align-items: center;
   text-align: center;
 }
+
+nav a:hover {
+  color: #1b7eb8;
+}
+
+nav a.active {
+  color: #2e9fe0;
+  border-bottom: solid 3px #2e9fe0;
+}
