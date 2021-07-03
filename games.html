@@ -4,7 +4,6 @@ layout: default
 
 <div class="header-box">
   <h3 class="title">We make games. You can too!</h3>
-  <!-- <div class="divider"></div> -->
   <p>
     Interested in making games? The UBCO Video Game Development Club is the perfect resource to help develop your game
     dev skills.
@@ -22,19 +21,32 @@ layout: default
     You can find a full list of our projects on our
     <a class="inline-link" href="https://github.com/ubco-video-game-development-club">GitHub organization</a>.
   </p>
-  <!-- <div class="divider"></div> -->
 </div>
 <div class="game-grid">
   {% for game in site.data.games %}
   <div class="game-box">
-    <a class="game-body" style="background-image: url('{{ game.img }}')" href="{{ game.link }}">
+    <div class="game-body" style="background-image: url('{{ game.img }}')" onclick="loadLink(event, '{{ game.link }}')">
       <div class="game-title">
         <h2>{{ game.title }}</h2>
       </div>
       <div class="game-desc">
         <h4>{{ game.description }}</h4>
+        <div class="game-links">
+          <img onclick="loadLink(event, '{{ game.github }}')" src="/assets/img/github-logo.png" height="32" href="#" />
+        </div>
       </div>
-    </a>
+    </div>
   </div>
   {% endfor %}
 </div>
+
+<script>
+  function loadLink(event, url) {
+    event.stopPropagation();
+    console.log(url);
+    var isTextSelected = window.getSelection().toString();
+    if (!isTextSelected) {
+      window.open(url, "_blank")
+    }
+  }
+</script>

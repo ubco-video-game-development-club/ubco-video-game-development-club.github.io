@@ -44,6 +44,8 @@
   box-shadow: 3px 3px #323a40;
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
+  cursor: pointer;
 }
 
 .game-title {
@@ -70,17 +72,36 @@
 }
 
 .game-body h2 {
-  color: #2e9fe0;
   margin: 0 20px;
   font-family: vgdc-title;
   letter-spacing: 5px;
+  color: #2e9fe0;
 }
 
 .game-body h4 {
+  height: 80%;
   margin: 0 20px;
   font-family: vgdc-body;
   font-size: 20px;
   letter-spacing: normal;
+}
+
+.game-links {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 20%;
+  margin: 0 20px;
+}
+
+.game-links img {
+  margin-left: 10px;
+}
+
+.game-links img:hover {
+  background-color: #2e9fe0;
+  border: solid 2px #1b7eb8;
+  border-radius: 20px;
 }
 
 body {
@@ -176,7 +197,7 @@ nav {
   background-color: #323a40bf;
 }
 
-a {
+nav a {
   color: white;
   text-decoration: none;
   width: 20%;
