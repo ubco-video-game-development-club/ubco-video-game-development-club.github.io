@@ -2,12 +2,34 @@
 layout: default
 ---
 
+<div class="header-box">
+  <h3 class="title">We make games. You can too!</h3>
+  <!-- <div class="divider"></div> -->
+  <p>
+    Interested in making games? The UBCO Video Game Development Club is the perfect resource to help develop your game
+    dev skills.
+  </p>
+  <p>
+    Through the year, we run workshops, post challenges, and host game jams for all skill levels and areas of game
+    development - from coding, to art, to music. Furthermore, our
+    <a class="inline-link" href="https://github.com/ubco-video-game-development-club">Discord</a> community offers a
+    friendly environment where you can ask questions, meet fellow aspiring game developers, and collaborate on projects.
+    Come chat with us and start your game dev journey today!
+  </p>
+  <div class="divider"></div>
+  <h2 class="subtitle">Our Projects</h2>
+  <p class="centered">
+    You can find a full list of our projects on our
+    <a class="inline-link" href="https://github.com/ubco-video-game-development-club">GitHub organization</a>.
+  </p>
+  <!-- <div class="divider"></div> -->
+</div>
 <div class="game-grid">
   {% for game in site.data.games %}
   <div class="game-box">
     <a class="game-body" style="background-image: url('{{ game.img }}')" href="{{ game.link }}">
       <div class="game-title">
-        <h1>{{ game.title }}</h1>
+        <h2>{{ game.title }}</h2>
       </div>
       <div class="game-desc">
         <h4>{{ game.description }}</h4>
