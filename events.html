@@ -2,10 +2,10 @@
 layout: default
 title: Events
 ---
-<section>
+<div class="header-box">
   <h2>Upcoming Events</h2>
   <ul>
-    {% for event in site.events %}
+    {% for event in site.data.events %}
       <li class="event">
         <h3>{{event.name}}</h3>
         <!-- room should be specified as 'online' if it is not an IRL event -->
@@ -21,9 +21,9 @@ title: Events
           <a href="{{ event.link }}"> <h4>Link</h4> </a>
         {% endif %}
         <p>
-          {{ content }}
+          {{ event.description }}
         </p>
       </li>
     {% endfor %}
   </ul>
-</section>
+</div>
