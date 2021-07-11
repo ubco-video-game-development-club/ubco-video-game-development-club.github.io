@@ -4,26 +4,18 @@ title: Events
 ---
 <div class="header-box">
   <h2>Upcoming Events</h2>
-  <ul>
-    {% for event in site.data.events %}
-      <li class="event">
-        <h3>{{event.name}}</h3>
-        <!-- room should be specified as 'online' if it is not an IRL event -->
-        <h4>Room: {{ event.room }}</h4>
-        <h4>Start time: {{ event.start_time }}</h4>
-        <h4>End time: {{ event.end_time }}</h4>
-        <!-- 
-          Event link is optional:
+  {% for event in site.data.events %}
 
-          https://www.mattcrampton.com/blog/checking_if_a_variable_is_set_in_jekyll/
-        -->
-        {% if event.link And event.link != "" And event.link != nil %}
-          <a href="{{ event.link }}"> <h4>Link</h4> </a>
-        {% endif %}
-        <p>
-          {{ event.description }}
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="event">
+      <b>{{ event.name }}</b>
+      <p>
+        Room: {{ event.room }} <br />
+        Start Time: {{ event.start_time }} <br />
+        End Time: {{ event.end_time }} <br />
+      </p>
+      <hr />
+      <p>{{ event.description }}</p>
+    </div>
+
+  {% endfor %}
 </div>

@@ -125,6 +125,24 @@ body {
   background-color: #444a4f;
 }
 
+div.event {
+  background-color: #212426;
+  border-radius: 4px;
+  margin: 1em;
+  max-width: 50em;
+  padding: 0.5em;
+  transition: 0.3s;
+}
+
+div.event:hover {
+  margin: 0.5em;
+  max-width: 51em;
+}
+
+div.event p {
+  margin: 0.5em;
+}
+
 img {
   margin: 16px;
 }
