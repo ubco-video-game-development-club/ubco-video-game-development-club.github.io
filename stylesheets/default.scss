@@ -32,6 +32,12 @@
   align-items: center;
   width: 480px;
   height: 270px;
+  transition: 0.3s;
+}
+
+.game-box:hover {
+  width: 490px;
+  height: 280px;
 }
 
 .game-body {
@@ -161,6 +167,24 @@ body {
   letter-spacing: 10px;
   color: white;
   background-color: #444a4f;
+}
+
+div.event {
+  background-color: #212426;
+  border-radius: 4px;
+  margin: 1em;
+  max-width: 50em;
+  padding: 0.5em;
+  transition: 0.3s;
+}
+
+div.event:hover {
+  margin: 0.5em;
+  max-width: 51em;
+}
+
+div.event p {
+  margin: 0.5em;
 }
 
 .social-icon {
