@@ -32,6 +32,12 @@
   align-items: center;
   width: 480px;
   height: 270px;
+  transition: 0.3s;
+}
+
+.game-box:hover {
+  width: 490px;
+  height: 280px;
 }
 
 .game-body {
