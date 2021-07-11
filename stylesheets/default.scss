@@ -104,6 +104,15 @@
   border-radius: 20px;
 }
 
+a {
+  color: #2e9fe0;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #80d0ff;
+}
+
 body {
   margin: 0;
   height: 100vh;
