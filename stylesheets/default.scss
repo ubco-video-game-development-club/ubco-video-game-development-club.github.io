@@ -7,11 +7,6 @@
   src: url(/assets/fonts/lemonmilk_regular.otf);
 }
 
-@font-face {
-  font-family: vgdc-body;
-  src: url(/assets/fonts/dosis_medium.ttf);
-}
-
 .header-box {
   margin: 0 10%;
 }
@@ -88,8 +83,8 @@
 .game-body h4 {
   height: 80%;
   margin: 0 20px;
-  font-family: vgdc-body;
-  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   letter-spacing: normal;
 }
 
@@ -197,8 +192,8 @@ div.event p {
 
 p {
   margin: 40px;
-  font-family: vgdc-body;
-  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   letter-spacing: normal;
   text-align: left;
   color: #e6e6e6;
