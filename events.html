@@ -2,20 +2,39 @@
 layout: default
 title: Events
 ---
-<div class="header-box">
-  <h2>Upcoming Events</h2>
-  {% for event in site.data.events %}
 
-    <div class="event">
-      <b>{{ event.name }}</b>
-      <p>
-        Room: {{ event.room }} <br />
-        Start Time: {{ event.start_time }} <br />
-        End Time: {{ event.end_time }} <br />
-      </p>
-      <hr />
-      <p>{{ event.description }}</p>
+<div class="header-box centered">
+  <h1 class="title">See what's on the menu.</h1>
+  <div class="main-box centered">
+    <h2 class="subtitle">Upcoming Events</h2>
+    <div class="events-list">
+      {% for event in site.data.events %}
+      <div class="event">
+        <b>{{ event.name }}</b>
+        <p>
+          Location: {{ event.room }} <br />
+          Start Time: {{ event.start_time }} <br />
+          End Time: {{ event.end_time }} <br />
+        </p>
+        <hr />
+        <p>{{ event.description }}</p>
+      </div>
+      {% endfor %}
     </div>
-
-  {% endfor %}
+    <h2 class="subtitle">Past Events</h2>
+    <div class="events-list">
+      {% for event in site.data.past-events %}
+      <div class="event">
+        <b>{{ event.name }}</b>
+        <p>
+          Location: {{ event.room }} <br />
+          Start Time: {{ event.start_time }} <br />
+          End Time: {{ event.end_time }} <br />
+        </p>
+        <hr />
+        <p>{{ event.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
