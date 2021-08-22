@@ -5,41 +5,55 @@ title: About
 
 <div class="header-box centered">
   <h1 class="title">About Us</h1>
-  <p>
-    The UBCO Video Game Development Club is the best place to learn about and participate in game development at the
-    University of British Columbia Okanagan. It is run by some of UBCO's finest students, all of which are passionate
-    about the art of game development and love to teach, learn, and collaborate. Throughout the school year, we run
-    events to encourage people to make video games, play video games, and overall have fun. Don't know how to make a
-    video game, but want to learn? You're welcome here as well! We run workshops and other events to help people learn
-    how to make games, and have an amazing mentorship program to help you along the way.
-  </p>
-  <p>
-    Come meet us on <a href="https://discord.gg/ydXaAjQ">Discord</a>, or any of our other social medias.
-    <br />
-    <a class="social-icon" href="https://discord.gg/ydXaAjQ" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/discord-logo-smol.png" />
-    </a>
-    <a class="social-icon" href="https://github.com/ubco-video-game-development-club" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/github-smol.png" />
-    </a>
-    <a class="social-icon" href="https://www.instagram.com/ubco_vgdc/" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/instagram-logo-smol.png" />
-    </a>
-    <a class="social-icon" href="https://www.twitch.tv/ubco_vgdc" target="_blank" rel="noopener noreferrer">
-      <img src="assets/img/twitch-logo-smol.png" />
-    </a>
-  </p>
-  <div class="divider"></div>
-  <h2 class="subtitle">Our Team</h2>
-  <div class="exec-grid">
-    {% for exec in site.data.execs %}
-    <div class="exec-box">
-      <img class="exec-img" src="{{ exec.img }}" />
-      <p class="exec-name">{{ exec.name }}</p>
-      <p class="exec-position">
-        <i>{{ exec.position }}</i>
-      </p>
+  <div class="main-box centered">
+    <div class="body-2col-parent">
+      <div class="body-2col-child">
+        <img src="assets/img/ubco-campus.jpg" />
+      </div>
+      <div class="body-2col-child">
+        <p>
+          The UBCO Video Game Development Club is the best place to learn about and participate in game development at
+          the University of British Columbia Okanagan. It is run by some of UBCO's finest students, all of which are
+          passionate about the art of game development and love to teach, learn, and collaborate. Throughout the school
+          year, we run events to encourage people to make video games, play video games, and overall have fun. Don't
+          know how to make a video game, but want to learn? You're welcome here as well! We run workshops and other
+          events to help people learn how to make games, and have an amazing mentorship program to help you along the
+          way.
+        </p>
+        <p>Come meet us on <a href="https://discord.gg/ydXaAjQ">Discord</a>, or any of our other social medias:</p>
+        <div class="socials">
+          <a class="social-icon" href="https://discord.gg/ydXaAjQ" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/discord-logo-smol.png" />
+          </a>
+          <a
+            class="social-icon"
+            href="https://github.com/ubco-video-game-development-club"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/img/github-smol.png" />
+          </a>
+          <a class="social-icon" href="https://www.instagram.com/ubco_vgdc/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/instagram-logo-smol.png" />
+          </a>
+          <a class="social-icon" href="https://www.twitch.tv/ubco_vgdc" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/twitch-logo-smol.png" />
+          </a>
+        </div>
+      </div>
     </div>
-    {% endfor %}
+    <div class="divider"></div>
+    <h2 class="subtitle">Our Team</h2>
+    <div class="exec-grid">
+      {% for exec in site.data.execs %}
+      <div class="exec-box">
+        <img class="exec-img" src="{{ exec.img }}" />
+        <p class="exec-name">{{ exec.name }}</p>
+        <p class="exec-position">
+          <i>{{ exec.position }}</i>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

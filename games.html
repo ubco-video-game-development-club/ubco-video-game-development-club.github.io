@@ -4,40 +4,58 @@ layout: default
 
 <div class="header-box centered">
   <h1 class="title">We make games. You can too!</h1>
-  <p>
-    Interested in making games? The UBCO Video Game Development Club is the perfect resource to help develop your game
-    dev skills.
-  </p>
-  <p>
-    Through the year, we run workshops, post challenges, and host game jams for all skill levels and areas of game
-    development - from coding, to art, to music. Furthermore, our
-    <a class="inline-link" href="https://github.com/ubco-video-game-development-club">Discord</a> community offers a
-    friendly environment where you can ask questions, meet fellow aspiring game developers, and collaborate on projects.
-    Come chat with us and start your game dev journey today!
-  </p>
-  <div class="divider"></div>
-  <h2 class="subtitle">Our Projects</h2>
-  <p class="centered">
-    You can find a full list of our projects on our
-    <a class="inline-link" href="https://github.com/ubco-video-game-development-club">GitHub organization</a>.
-  </p>
-</div>
-<div class="game-grid">
-  {% for game in site.data.games %}
-  <div class="game-box">
-    <div class="game-body" style="background-image: url('{{ game.img }}')" onclick="loadLink(event, '{{ game.link }}')">
-      <div class="game-title">
-        <h2>{{ game.title }}</h2>
+  <div class="main-box centered">
+    <div class="body-2col-parent">
+      <div class="body-2col-child">
+        <img src="assets/img/vgdc-splash-screen.png" />
       </div>
-      <div class="game-desc">
-        <h4>{{ game.description }}</h4>
-        <div class="game-links">
-          <img onclick="loadLink(event, '{{ game.github }}')" src="/assets/img/github-logo.png" height="32" href="#" />
-        </div>
+      <div class="body-2col-child">
+        <p>
+          Interested in making games? The UBCO Video Game Development Club is the perfect resource to help develop your
+          game dev skills.
+        </p>
+        <p>
+          Through the year, we run workshops, post challenges, and host game jams for all skill levels and areas of game
+          development - from coding, to art, to music. Furthermore, our
+          <a class="inline-link" href="https://github.com/ubco-video-game-development-club">Discord</a> community offers
+          a friendly environment where you can ask questions, meet fellow aspiring game developers, and collaborate on
+          projects. Come chat with us and start your game dev journey today!
+        </p>
       </div>
     </div>
+    <div class="divider"></div>
+    <h2 class="subtitle">Our Projects</h2>
+    <p class="centered">
+      You can find a full list of our projects on our
+      <a class="inline-link" href="https://github.com/ubco-video-game-development-club">GitHub organization</a>.
+    </p>
+    <div class="game-grid">
+      {% for game in site.data.games %}
+      <div class="game-box">
+        <div
+          class="game-body"
+          style="background-image: url('{{ game.img }}')"
+          onclick="loadLink(event, '{{ game.link }}')"
+        >
+          <div class="game-title">
+            <h2>{{ game.title }}</h2>
+          </div>
+          <div class="game-desc">
+            <h4>{{ game.description }}</h4>
+            <div class="game-links">
+              <img
+                onclick="loadLink(event, '{{ game.github }}')"
+                src="/assets/img/github-logo.png"
+                height="32"
+                href="#"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
 </div>
 
 <script>
@@ -46,7 +64,7 @@ layout: default
     console.log(url);
     var isTextSelected = window.getSelection().toString();
     if (!isTextSelected) {
-      window.open(url, "_blank")
+      window.open(url, '_blank');
     }
   }
 </script>
