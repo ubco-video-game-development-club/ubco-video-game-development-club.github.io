@@ -280,6 +280,7 @@ p {
   border: none;
   width: 100vw;
   height: calc(100vh - 80px);
+  filter: blur(4px) opacity(100%);
 }
 
 #ubco-box {
