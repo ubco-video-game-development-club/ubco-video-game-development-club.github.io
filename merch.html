@@ -4,8 +4,52 @@ title: Merch
 ---
 
 <div class="header-box centered">
-  <h1 class="title">Represent... In Style.</h1>
+  <h1 class="title">Rep the club. Buy Merch.</h1>
   <div class="main-box centered">
-    <h2 class="subtitle">Coming Soon...</h2>
+    <div class="body-2col-parent">
+      <div class="body-2col-child">
+        <img src="assets/img/merch-splash.png" height="500px" />
+      </div>
+      <div class="body-2col-child">
+        <p>
+          Do you want merch? We already know you do. And we have you covered.
+        </p>
+        <p>
+          It's been a long time coming, but it's finally here. You can buy your merch below - Just click the item you want, and fill out the form. Payments are made in cash on campus.
+        </p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <h2 class="subtitle">Merchandise</h2>
+    <div class="game-grid">
+      {% for merch in site.data.merch %}
+      <div class="game-box">
+        <div
+          class="game-body"
+          style="background-image: url('{{ merch.img }}')"
+          onclick="loadLink(event, 'https://forms.gle/JqBsWNLR9Z5ZApRN7');"
+        >
+          <div class="game-title">
+            <h2>{{ merch.title }}</h2>
+          </div>
+          <div class="game-desc">
+            <h4>{{ merch.description }}</h4>
+            <h2>{{ merch.price }}</h2>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
+
+<script>
+  function loadLink(event, url) {
+    event.stopPropagation();
+    console.log(url);
+    var isTextSelected = window.getSelection().toString();
+    if (!isTextSelected) {
+      window.open(url, '_blank');
+    }
+  }
+</script>
